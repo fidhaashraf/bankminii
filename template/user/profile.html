@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        /* background-color: blue; */
+          background-image: url('{% static 'image/Rectangle.png' %}');
+        }
+        .mainav{
+          background-color: #B7DACF;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mainav">
+      <nav class="navbar navbar-expand-lg mainav">
+        <div class="container-fluid mainav">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="user_home">Home</a>
+              <a class="nav-link active" aria-current="page" href="deposite">Deposite</a>
+              <a class="nav-link active" aria-current="page" href="withraw">Withdrawal</a>
+              <a class="nav-link active" aria-current="page" href="userlogout">Logout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- IMAGE AND BELOW -->
+  <div class="container">
+    <div class="row">
+    <div style="background-color: #B7DACF;border-radius: 12px;" class="col-5 mt-5 ">
+        <div>
+            <div class="text-center"><img style="border-radius: 50%;width: 100px;" src="{{ data.image.url }}" alt=""></div>
+            <div style="font-weight: 600;" class="text-center">{{ data.first_name }}</div>
+        </div>
+        <div>
+            <div class="container">
+                <div class="row ms-5 mt-3">
+                  <div class="col">
+                    <p style="font-weight: 600;">Email <br> <div style="color: darkgreen;" class="ms-3">{{ data.email }}</div></p>
+                    <p style="font-weight: 600;">Address <br><div style="color: darkgreen;" class="ms-3">{{ data.address }}</div></p>
+                    <p style="font-weight: 600;">Aadhar <br><div style="color: darkgreen;" class="ms-3">{{ data.adhar_no }}</div></p>
+                    <p style="font-weight: 600;">Amount <br><div style="color: darkgreen;" class="ms-3">{{ data.amount }}</div></p>
+
+                  </div>
+                  <div class="col">
+                    <p style="font-weight: 600;">Username <br><div style="color: darkgreen;" class="ms-3">{{ data.username }}</div></p>
+                    <p style="font-weight: 600;">DOB <br><div style="color: darkgreen;" class="ms-3">{{ data.dob }}</div></p>
+                    <p style="font-weight: 600;">Phone number <br><div style="color: darkgreen;" class="ms-3">{{ data.phone_no }}</div></p>
+                    <p style="font-weight: 600;">Pan number <br><div style="color: darkgreen;" class="ms-3">{{ data.pancard_no }}</div></p>
+
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-end ">
+            <!-- EDIT PROFILE -->
+            <a href="edit_profile">
+
+                <svg style="background-color: white;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                </svg>
+
+            </a>
+        </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

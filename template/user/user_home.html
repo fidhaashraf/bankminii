@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-color: black;
+      }
+      .mainav{
+        background-color: #B7DACF;
+      }
+      .details{
+        background-color: #B7DACF;
+      }
+    </style>
+</head>
+<body>
+    <div class="mainav">
+      <nav class="navbar navbar-expand-lg mainav">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="user_home">Home</a>
+                <a class="nav-link active" aria-current="page" href="deposite">Deposite</a>
+                <a class="nav-link active" aria-current="page" href="withraw">Withdrawal</a>
+                <a class="nav-link active" aria-current="page" href="userlogout">Logout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- USER_HOME -->
+  <div class="container">
+    <div class="row mt-2 ">
+      <div class="col-4 text-light "><h2>Horizon Bank</h2></div>
+      <div class="col-4 text-light"><h2>Horizon Bank</h2></div>
+      <div class="col-4 text-light"><h2>Horizon Bank</h2></div>
+    </div>
+    <div class="row">
+    <div class="col-6 mt-5 details" style="height: 300px;border-radius: 20px;padding-top: 40px;">
+        <p class="text-center">Account Number</p>
+            <div class="text-center">{{ data.account_no }}</div>
+        <p class="text-center">Avaiable balance</p>
+            <div class="text-center">{{ data.amount }}</div><br>
+
+        <!-- <div class="text-start mt-1"> -->
+          <div>
+            <a  href="{% url 'user_history' %}" style="color: darkgreen;">View History</a>
+        <!-- </div> -->
+        <!-- <div class="text-end mb-5 "> -->
+            <a style="text-align: end;padding-left: 400px;color: darkgreen;" href="more">More</a>
+          </div>
+        <!-- </div> -->
+
+    </div>
+    </div>
+  </div>
+</body>
+</html>

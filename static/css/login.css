@@ -1,0 +1,20 @@
+.bankimg{
+    height:606px;
+    width: 90%;
+}
+.border{
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.loginbtn{
+    border-radius: 8px;
+}
+.bground{
+    background-color: #87B4A6;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 20px;
+}
